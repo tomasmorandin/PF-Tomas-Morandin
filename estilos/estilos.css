@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.navbar {
+  background-color: rgba(165, 145, 145, 0.424);
+  width: 100%;
+  position: fixed;
+  animation-name: aparecer1;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+}
+@keyframes aparecer1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.navbar .navbar-brand {
+  animation-name: aparecer2;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.8s;
+}
+@keyframes aparecer2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+.navbar img {
+  height: 90px;
+}
+.navbar .nav-link {
+  color: black !important;
+  font-size: 27px !important;
+  text-shadow: 0 0 5px #fff;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.3s;
+  animation-name: movimiento;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+@keyframes movimiento {
+  0% {
+    opacity: 0;
+    transform: translateX(160px);
+  }
+  30% {
+    opacity: 1;
+    text-shadow: 0 0 5px black;
+  }
+  60% {
+    opacity: 1;
+    text-shadow: 0 0 10px black;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.navbar .nav-link:hover {
+  color: white !important;
+  transform: scale(1.06);
+}
+
+.jumbotron {
+  background-color: rgb(121, 7, 7);
+  font-size: 40px;
+  height: 750px;
+  color: black;
+  font-family: "Ubuntu", sans-serif;
+  padding-top: 450px;
+  padding-left: 20px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.jumbotron h1 {
+  font-size: 40px;
+}
+.jumbotron p {
+  font-size: 27px;
+}
+.jumbotron a {
+  font-size: 18px;
+}
+.jumbotron .btn {
+  background-color: rgb(121, 7, 7);
+  border-radius: 15px;
+  transition: all 0.7s;
+}
+.jumbotron .btn:hover {
+  transform: scale(1.08);
+}
+
+.jumbotron1 {
+  background-image: url(../mutlimedia/imagenes/Arquitectos\ en\ obra\ 3.jpg);
+}
+
+h2 {
+  background-color: black;
+  font-size: 27px;
+  height: 60px;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  line-height: unset;
+  padding: 10px;
+  text-shadow: 0 0 5px #fff;
+  margin-bottom: 0;
+}
+
+aside {
+  background-color: rgb(121, 7, 7);
+  background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(121, 7, 7));
+}
+aside p {
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  text-align: justify;
+  padding-top: 20px;
+}
+
+.carousel-indicators button[type=button] {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+.cards {
+  background-color: rgb(121, 7, 7);
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(121, 7, 7));
+  padding: 10px;
+}
+.cards .card {
+  transition: all 0.7s;
+  color: black;
+}
+.cards .card:hover {
+  transform: scale(1.05);
+}
+.cards .card-body {
+  background-color: white;
+}
+.cards .card-body .card-title {
+  font-size: 22px;
+}
+.cards .card-body .card-subtitle {
+  font-size: 18px;
+}
+.cards .card-body .card-text {
+  font-size: 18px;
+}
+.cards .card-body .btn {
+  background-color: rgb(121, 7, 7);
+  color: white;
+}
+
+footer {
+  background-color: rgb(121, 7, 7);
+  font-size: 18px;
+  height: auto;
+  color: white;
+}
+footer img {
+  height: 90px;
+}
+footer span {
+  font-size: 18px;
+  font-weight: bold;
+}
+footer p {
+  font-size: 15px;
+}
+footer ul li {
+  list-style: none;
+  font-size: 15px;
+  list-style: none;
+}
+footer ul li a {
+  color: white;
+}
+footer ul li a:hover {
+  color: black;
+}
+
+.footer1 a {
+  letter-spacing: 7px;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.jumbotron2 {
+  background-image: url(../Mutlimedia/Imagenes/Profesionales.png);
+}
+
+.main {
+  background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(121, 7, 7));
+  color: white;
+  padding-left: 22px !important;
+  padding-right: 22px !important;
+}
+.main .nleft, .main .nleft3, .main .nleft2 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 750px;
+}
+.main .nleft1 {
+  background-image: url(../Mutlimedia/Imagenes/Oficina\ 3.jpg);
+}
+.main .nright {
+  text-align: justify;
+  padding-top: 20px;
+}
+
+.jumbotron3 {
+  background-image: url(../Mutlimedia/Imagenes/Obras.png);
+}
+
+.nleft2 {
+  background-image: url(../Mutlimedia/Imagenes/Servicios\ 2.webp);
+}
+
+.tipologias {
+  background-image: linear-gradient(to top, rgb(121, 7, 7), rgb(0, 0, 0));
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  padding: 10px;
+}
+.tipologias .tipo-img {
+  border: 4px solid black;
+  border-radius: 5px;
+  height: 220px;
+}
+
+.Casa1-img {
+  /*background-image: url(../Mutlimedia/Imagenes/Casa1.jpg);*/
+  background-image: url("../Mutlimedia/Imagenes/Casa1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 0.5s;
+  margin-bottom: 10px;
+  filter: grayscale(100%);
+}
+
+.Casa2-img {
+  /*background-image: url(../Mutlimedia/Imagenes/Casa1.jpg);*/
+  background-image: url("../Mutlimedia/Imagenes/Casa2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 0.5s;
+  margin-bottom: 10px;
+  filter: grayscale(100%);
+}
+
+.Casa3-img {
+  /*background-image: url(../Mutlimedia/Imagenes/Casa1.jpg);*/
+  background-image: url("../Mutlimedia/Imagenes/Casa3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 0.5s;
+  margin-bottom: 10px;
+  filter: grayscale(100%);
+}
+
+.Casa4-img {
+  /*background-image: url(../Mutlimedia/Imagenes/Casa1.jpg);*/
+  background-image: url("../Mutlimedia/Imagenes/Casa4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 0.5s;
+  margin-bottom: 10px;
+  filter: grayscale(100%);
+}
+
+.Casa5-img {
+  /*background-image: url(../Mutlimedia/Imagenes/Casa1.jpg);*/
+  background-image: url("../Mutlimedia/Imagenes/Casa5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 0.5s;
+  margin-bottom: 10px;
+  filter: grayscale(100%);
+}
+
+.Casa6-img {
+  /*background-image: url(../Mutlimedia/Imagenes/Casa1.jpg);*/
+  background-image: url("../Mutlimedia/Imagenes/Casa6.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 0.5s;
+  margin-bottom: 10px;
+  filter: grayscale(100%);
+}
+
+.Casa7-img {
+  /*background-image: url(../Mutlimedia/Imagenes/Casa1.jpg);*/
+  background-image: url("../Mutlimedia/Imagenes/Casa7.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 0.5s;
+  margin-bottom: 10px;
+  filter: grayscale(100%);
+}
+
+.Casa8-img {
+  /*background-image: url(../Mutlimedia/Imagenes/Casa1.jpg);*/
+  background-image: url("../Mutlimedia/Imagenes/Casa8.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 0.5s;
+  margin-bottom: 10px;
+  filter: grayscale(100%);
+}
+
+.Casa9-img {
+  /*background-image: url(../Mutlimedia/Imagenes/Casa1.jpg);*/
+  background-image: url("../Mutlimedia/Imagenes/Casa9.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 0.5s;
+  margin-bottom: 10px;
+  filter: grayscale(100%);
+}
+
+.Casa1-img:hover {
+  filter: grayscale(0%);
+  background-size: 120%;
+}
+
+.Casa2-img:hover {
+  filter: grayscale(0%);
+  background-size: 120%;
+}
+
+.Casa3-img:hover {
+  filter: grayscale(0%);
+  background-size: 120%;
+}
+
+.Casa4-img:hover {
+  filter: grayscale(0%);
+  background-size: 120%;
+}
+
+.Casa5-img:hover {
+  filter: grayscale(0%);
+  background-size: 120%;
+}
+
+.Casa6-img:hover {
+  filter: grayscale(0%);
+  background-size: 120%;
+}
+
+.Casa7-img:hover {
+  filter: grayscale(0%);
+  background-size: 120%;
+}
+
+.Casa8-img:hover {
+  filter: grayscale(0%);
+  background-size: 120%;
+}
+
+.Casa9-img:hover {
+  filter: grayscale(0%);
+  background-size: 120%;
+}
+
+.jumbotron4 {
+  background-image: url(../Mutlimedia/Imagenes/Servicios.jpg);
+}
+
+.nleft3 {
+  background-image: url(../Mutlimedia/Imagenes/Oficina2.jpg);
+}
+
+.articulo {
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(121, 7, 7));
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+.articulo h3 {
+  font-size: 22px;
+}
+.articulo h3 i {
+  font-size: 18px;
+}
+.articulo p {
+  font-size: 15px;
+  text-align: justify;
+}
+
+.jumbotron5 {
+  background-image: url(../Mutlimedia/Imagenes/Contaacto\ 2.png);
+}
+
+.loc {
+  background-color: black;
+  background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(121, 7, 7));
+  color: white;
+  padding: 20px;
+}
+.loc .dire {
+  height: 350px;
+  margin-bottom: 200px;
+}
+.loc .dire span {
+  font-size: 22px;
+  font-weight: bold;
+}
+.loc .dire p {
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+
+.contacto {
+  background-color: rgb(121, 7, 7);
+  font-size: 18px;
+  height: auto;
+  color: white;
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(121, 7, 7));
+  padding: 20px;
+  text-align: left;
+}
+.contacto p {
+  margin-bottom: 10px;
+}
+.contacto input {
+  border-radius: 5px;
+  padding: 2px;
+  border: 2px solid white;
+  font-size: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: inset 0 0 5px black;
+}
+.contacto input:focus {
+  box-shadow: inset 0 0 5px black;
+  border: 5px solid black;
+}
+.contacto textarea {
+  border-radius: 5px;
+  padding: 2px;
+  border: 2px solid white;
+  font-size: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+  box-shadow: inset 0 0 5px black;
+}
+.contacto textarea:focus {
+  box-shadow: inset 0 0 5px rgb(121, 7, 7);
+  border: 5px solid rgb(121, 7, 7);
+}
+.contacto input[type=submit] {
+  width: 50px;
+  display: inline-block;
+}
+.contacto input[type=reset] {
+  width: 50px;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=estilos.css.map */
