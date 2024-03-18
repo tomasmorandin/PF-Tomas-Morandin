@@ -158,23 +158,23 @@ $img1: Feliz dia;
 $img2: Standar;
 $img3: Suplente;
 
-$fondo: otra;
+$fondo: $img2;
 
 .jumbotron1{
     @if $fondo==$img1 {
-        background-image: url(../Mutlimedia/Imagenes/Feliz\ dia.webp);
+        background-image: url(../multimedia/imagenes/Feliz\ dia.webp);
     }
 
     @else if $fondo==$img2 {
-        background-image: url(../mutlimedia/imagenes/Arquitectos\ en\ obra\ 3.jpg);
+        background-image: url(../multimedia/imagenes/Arquitectos\ en\ obra\ 3.jpg);
     }
 
     @else if $fondo==$img3 {
-        background-image: url(../Mutlimedia/Imagenes/Arquitectos\ en\ obra\ 4.webp);
+        background-image: url(../multimedia/imagenes/Arquitectos\ en\ obra\ 4.webp);
     }
 
     @else {
-        background-image: url(../Mutlimedia/Imagenes/Arquitectos\ en\ obra.jpg);
+        background-image: url(../multimedia/imagenes/Arquitectos\ en\ obra.jpg);
     }
 }
 
@@ -293,7 +293,7 @@ footer{
 
 //Call//
 .jumbotron2{
-    background-image: url(../Mutlimedia/Imagenes/Profesionales.png);
+    background-image: url(../multimedia/imagenes/Profesionales.png);
 }
 
 //Main//
@@ -312,7 +312,7 @@ footer{
         }
 
         .nleft1{
-            background-image: url(../Mutlimedia/Imagenes/Oficina\ 3.jpg);
+            background-image: url(../multimedia/imagenes/Oficina\ 3.jpg);
         }
 
         .nright{
@@ -326,13 +326,13 @@ footer{
 //Call//
 
 .jumbotron3{
-    background-image: url(../Mutlimedia/Imagenes/Obras.png);
+    background-image: url(../multimedia/imagenes/Obras.png);
 }
 
 //Main//
 
 .nleft2{
-    background-image: url(../Mutlimedia/Imagenes/Servicios\ 2.webp);
+    background-image: url(../multimedia/imagenes/Servicios\ 2.webp);
     @extend .nleft;
 }
 
@@ -359,8 +359,8 @@ footer{
 
 @each $casa in Casa1, Casa2, Casa3, Casa4, Casa5, Casa6, Casa7, Casa8, Casa9 {
     .#{$casa}-img {
-    /*background-image: url(../Mutlimedia/Imagenes/Casa1.jpg);*/
-    background-image: url("../Mutlimedia/Imagenes/#{$casa}.jpg");
+    /*background-image: url(../multimedia/imagenes/Casa1.jpg);*/
+    background-image: url("../multimedia/imagenes/#{$casa}.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -381,13 +381,13 @@ footer{
 //Call//
 
 .jumbotron4{
-    background-image: url(../Mutlimedia/Imagenes/Servicios.jpg);
+    background-image: url(../multimedia/imagenes/Servicios.jpg);
 }
 
 //Main//
 
 .nleft3{
-    background-image: url(../Mutlimedia/Imagenes/Oficina2.jpg);
+    background-image: url(../multimedia/imagenes/Oficina2.jpg);
     @extend .nleft;
     }
 
@@ -415,7 +415,7 @@ footer{
 //Call//
 
 .jumbotron5{
-    background-image: url(../Mutlimedia/Imagenes/Contaacto\ 2.png);
+    background-image: url(../multimedia/imagenes/Contaacto\ 2.png);
 }
 
 //Main//
