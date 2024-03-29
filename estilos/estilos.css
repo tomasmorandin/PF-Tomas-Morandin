@@ -109,7 +109,7 @@
 }
 
 .jumbotron1 {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.598)), url(../multimedia/imagenes/Arquitectos\ en\ obra\ 3.jpg);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7)), url(../multimedia/imagenes/Arquitectos\ en\ obra\ 3.jpg);
 }
 
 h2 {
@@ -333,7 +333,7 @@ footer ul li a:hover {
 }
 
 .jumbotron3 {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.19), rgba(255, 255, 255, 0.598)), url(../multimedia/imagenes/Obras.png);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.8)), url(../multimedia/imagenes/Obras.png);
 }
 
 .nleft2 {

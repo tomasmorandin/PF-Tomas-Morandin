@@ -173,11 +173,11 @@ $fondo: $img2;
 
 .jumbotron1{
     @if $fondo==$img1 {
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.598)), url(../multimedia/imagenes/Feliz\ dia.webp);
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), url(../multimedia/imagenes/Feliz\ dia.webp);
     }
 
     @else if $fondo==$img2 {
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.598)), url(../multimedia/imagenes/Arquitectos\ en\ obra\ 3.jpg);
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7)), url(../multimedia/imagenes/Arquitectos\ en\ obra\ 3.jpg);
     }
 
     @else if $fondo==$img3 {
@@ -444,7 +444,7 @@ footer{
 //Call//
 
 .jumbotron3{
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.19), rgba(255, 255, 255, 0.598)), url(../multimedia/imagenes/Obras.png);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.8)), url(../multimedia/imagenes/Obras.png);
 }
 
 //Main//
@@ -569,7 +569,7 @@ footer{
         }
         .servicio:hover {
             transform: scale(1.05);
-          }
+        }
     }
 
 
