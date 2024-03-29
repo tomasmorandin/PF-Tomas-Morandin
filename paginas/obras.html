@@ -25,13 +25,15 @@
     type="image/x-icon"
   />
     <link rel="stylesheet" href="../estilos/estilos.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
     <title>Obras Paraná y Santa Fe - Met Construcciones</title>
 </head>
 <body>
-     <!-- Nav bar inicia -->
-     <nav class="navbar navbar-expand-sm navbar-dark">
+<!-- Nav bar inicia -->
+    <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="../multimedia/logos/Logo MET_color.png" alt="logo"></a>
+        <a class="navbar-brand" href="../index.html"><img src="../multimedia/logos/Logo MET_color.png" alt="logo"></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -40,7 +42,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="../index.html">Inicio</a>
@@ -61,10 +63,10 @@
         </div>
       </div>
     </nav>
-    <!-- Nav bar finaliza -->
+<!-- Nav bar finaliza -->
 
-     <!-- Jumbotorm inicia -->
- <div class="text-dark jumbotron jumbotron3 img-fluid">
+<!-- Jumbotorm inicia -->
+<div class="text-dark jumbotron jumbotron3 img-fluid">
   <h1>Productos exclusivos de excelencia</h1>
   <p>Materializamos tus sueños</p>
   <button type="button" class="btn text-white"><a class="text-decoration-none text-white" href="../paginas/contacto.html">Contactanos</a></button>
@@ -76,9 +78,9 @@
 <!-- Main -->
 <div class="main container-fluid">
   <div class="row">
-      <div class="nleft2 col-md-6 col-sm-12"></div>
+      <div class="nleft2 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="3000"></div>
       
-      <div class="nright col-md-6 col-sm-12">
+      <div class="nright col-md-6 col-sm-12" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
           <h3>Nuestras obras</h3>
           <p>Somos una empresa constructora conformada
             en su totalidad por profesionales del rubro con
@@ -99,69 +101,99 @@
 
 <!-- Acordeon-->
 
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Tipologías
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+
+      <div class="accordion-body container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+        <ul type="disc">
+          <li><a href="#galery">Viviendas Unifamiliares</a></li>
+          <li><a href="#galery">Edificios en Torre</a></li>
+        </ul></div>
+        
+            <div class="col-md-4">
+          <ul type="disc">
+            <li><a href="#galery">Locales Comerciales</a></li>
+            <li><a href="#galery">Clubes e Instituciones</a></li>
+          </ul></div>
+
+              <div class="col-md-4">
+            <ul type="disc">
+              <li><a href="#galery">Infraestructura Urbana</a></li>
+              <li><a href="#galery">Edificios de Salud</a></li>
+            </ul></div></div></div>
+          </div></div>
+    </div>
+</div>
 <!-- Acordeon finaliza-->
 
 <!-- Galeria -->
-    <h2>Tipologías</h2>
-
+    <h2 id="galery">Vivienda unifamiliar</h2>
 <main class="tipologias container-fluid">
     <div class="row">
 <!--tipo 1-->      
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <div class="tipo-img Casa1-img"></div>
         <h3>Buena Vista span span</h3>
         <p>Vivienda unifamiliar - sup 405 m2</p>
       </div>
 <!--tipo 2-->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <div class="tipo-img Casa2-img"></div>
         <h3>Tejeiro Martinez</h3>
         <p>Vivienda unifamiliar - sup 480 m2</p>
       </div>
 <!--tipo 3-->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <div class="tipo-img Casa3-img"></div>
         <h3>Puerto Barrancas</h3>
         <p>Vivienda unifamiliar - sup 360 m2</p>
       </div>
 <!--tipo 4--> 
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <div class="tipo-img Casa4-img"></div>
         <h3>Villa Elsa</h3>
         <p>Vivienda unifamiliar - sup 510 m2</p>
       </div>
 <!--tipo 5-->  
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <div class="tipo-img Casa5-img"></div>
         <h3>Santa Candida</h3>
         <p>Vivienda unifamiliar - sup 414 m2</p>
       </div>
 <!--tipo 6--> 
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <div class="tipo-img Casa6-img"></div>
         <h3>Toma Vieja</h3>
         <p>Vivienda unifamiliar - sup 580 m2</p>
       </div>
 <!--tipo 7--> 
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <div class="tipo-img Casa7-img"></div>
         <h3>Bajada Grande</h3>
         <p>Vivienda unifamiliar - sup 640 m2</p>
       </div>
 <!--tipo 8-->        
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <div class="tipo-img Casa8-img"></div>
         <h3>Puerto Urquiza</h3>
         <p>Vivienda unifamiliar - sup 340 m2</p>
       </div>
 <!--tipo 9--> 
-      <div class="col-md-12 col-lg-4">
+      <div class="col-md-12 col-lg-4" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <div class="tipo-img Casa9-img"></div>
         <h3>Barrio Médicos</h3>
         <p>Vivienda unifamiliar - sup 740 m2</p>
     </div>
   </div>
-</div>
+</main>
 <!-- Galeria -->
 
 <!--Footer -->
@@ -176,14 +208,13 @@
            <li><a href="../paginas/servicios.html" class="text-decoration-none">Servicios</a></li>
           <li><a href="../paginas/contacto.html" class="text-decoration-none">Contacto</a></li></ul></footer>
           
-      <footer class="footer1 col-sm-4 col-xs-12 text-center"><span>Santa Fe</span>
+      <footer class="icons col-sm-4 col-xs-12 text-center"><span>Santa Fe</span>
           <p>Luciano Torrent 1517,<br> Santa Fe Capital,CP 3000</p>
           <span>Entre Ríos</span>
            <p>Av. Francisco Ramirez 1257,<br> Paraná,CP 3100</p>
 
-           <a href=""><i class="fa-brands fa-facebook-f"></i></i></a>
-              <a href=""><i class="fa-brands fa-instagram"></i></a>
-              <a href=""><i class="fa-brands fa-twitter"></i></a>
+           <a href="https://www.facebook.com/metconstrucciones?mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></i></a>
+              <a href="https://www.instagram.com/met.construcciones.srl?igsh=MXNydXN3cnRkaTkzbw=="><i class="fa-brands fa-instagram"></i></a>
               <a href=""><i class="fa-brands fa-youtube"></i></a>
               <a href="https://walink.co/9adc32" class="wp"><i class="fa-brands fa-whatsapp"></i></a>
           </footer>
@@ -205,6 +236,14 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
 
 </body>
 </html>

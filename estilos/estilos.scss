@@ -8,11 +8,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 
-$fondo1: rgba(165, 145, 145, 0.424);
+$fondo1: rgba(242, 235, 235, 0.7);
 $fondo2: rgba(121, 7, 7);
 $fondo3: black;
 $fondo4: white;
 $fondo5: rgba(0, 0, 0);
+$fondo6: rgba(165, 145, 145, 0.6);
 
 $font2: "Ubuntu", sans-serif;
 
@@ -29,7 +30,7 @@ $height1: 90px;
 $height2: 350px;
 $height3: 550px;
 $height4: 750px;
-$height5: 850px;
+$height5: 900px;
 
 @mixin property ($fondo, $fontsize, $height, $color) {
     background-color: $fondo;
@@ -50,6 +51,7 @@ $height5: 850px;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 0.5s;
+    z-index: 99999;
 
     @keyframes aparecer1 {
         from {
@@ -81,17 +83,23 @@ $height5: 850px;
     img{
         height: $height1;
         }
-        
-        .nav-link{
-            color: $color2 !important;
-            font-size: $fontsize2 !important;
-            text-shadow: 0 0 5px #fff;
-            font-family: $font2;
-            transition: all 0.3s;
-            animation-name: movimiento;
-            animation-iteration-count: 1;
-            animation-timing-function: ease-in;
-            animation-duration: 2s;
+
+    .collapse{
+            ul{
+                li{
+                    padding: 15px;
+                    .nav-link{
+                        color: $color2 !important;
+                        font-size: $fontsize3 !important;
+                        transition: all 0.3s;
+                        animation-name: movimiento;
+                        animation-iteration-count: 1;
+                        animation-timing-function: ease-in;
+                        animation-duration: 2s;
+                    }
+
+                }
+            }
         }
 
         @keyframes movimiento {
@@ -101,12 +109,12 @@ $height5: 850px;
             }
             30%{
                 opacity: 1;
-                text-shadow: 0 0 5px black;
+                text-shadow: 0 0 5px $color2;
             }
 
             60%{
                 opacity: 1;
-                text-shadow: 0 0 10px black;
+                text-shadow: 0 0 10px $color2;
             }
             
             100%{
@@ -123,34 +131,37 @@ $height5: 850px;
 //Call//
 
 .jumbotron{
-    @include property ($fondo2, $fontsize1, $height4, $color2);
-    font-family: $font2;
-    padding-top: 450px;
+    @include property ($fondo2, $fontsize1, $height5, $color2);
+    padding-top: 590px;
     padding-left: 20px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    
 
     h1{
-        font-size:$fontsize1 ;
+        font-size:$fontsize1;
+        font-weight: bold;
     }
 
     p{
-        font-size:$fontsize2 ;
+        font-size:$fontsize2;
     }
 
     a{
-        font-size:$fontsize4 ;
+        font-size:$fontsize4;
     }
 
     .btn{
         background-color:$fondo2;
         border-radius: 15px;
+        border: 2px solid $color2;
         transition: all 0.7s;
     }
     
     .btn:hover{
-        transform: scale(1.08);
+        transform: scale(1.1);
+        background-color:$fondo3;
     }
 }
 
@@ -162,89 +173,172 @@ $fondo: $img2;
 
 .jumbotron1{
     @if $fondo==$img1 {
-        background-image: url(../multimedia/imagenes/Feliz\ dia.webp);
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.598)), url(../multimedia/imagenes/Feliz\ dia.webp);
     }
 
     @else if $fondo==$img2 {
-        background-image: url(../multimedia/imagenes/Arquitectos\ en\ obra\ 3.jpg);
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.598)), url(../multimedia/imagenes/Arquitectos\ en\ obra\ 3.jpg);
     }
 
     @else if $fondo==$img3 {
-        background-image: url(../multimedia/imagenes/Arquitectos\ en\ obra\ 4.webp);
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.598)), url(../multimedia/imagenes/Arquitectos\ en\ obra\ 4.webp);
     }
 
     @else {
-        background-image: url(../multimedia/imagenes/Arquitectos\ en\ obra.jpg);
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.598)), url(../multimedia/imagenes/Arquitectos\ en\ obra.jpg);
     }
 }
 
 //Titulo//
 
 h2{
-    @include property (black, 27px, 60px, white);
+    @include property ($color2, 27px, 60px, $color1);
     font-family: $font2;
     text-align: center;
     line-height: unset;
     padding: 10px;
-    text-shadow: 0 0 5px #fff;
+    text-shadow: 0 0 5px $color1;
     margin-bottom: 0;
 }
 
 //Carrousel//
 
-aside{
-    background-color: $fondo2;
-    background-image: linear-gradient( to top , $fondo5 , $fondo2);
-
+.main{
     p{
         color: $color1;
-        font-family: $font2;
         font-size: $fontsize4;
         text-align: justify;
         padding-top: 20px;
         }
- }
-
-.carousel-indicators {
-    button[type= button]{
-        height: 15px;
-        width: 15px;
-        border-radius: 50%;
-    } 
+        .carousel-indicators {
+            button[type= button]{
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+            } 
+        }
 }
+
 
 //Cards//
 
-.cards{
-    background-color:$fondo2;
-    background-image: linear-gradient( to bottom , $fondo5 , $fondo2);  
+.swiper-container{
+    position: relative;
+    height: 100%; 
     padding: 10px;
+    overflow: hidden;
 
     .card{
         transition: all 0.7s;
         color: $color2;
+        padding: 15px;
+
+        .card-1{
+            background-image: url(../multimedia/imagenes/Casa1.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 300px;
+        }
+        .card-2{
+            background-image: url(../multimedia/imagenes/Casa2.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 300px;
+        }
+        .card-3{
+            background-image: url(../multimedia/imagenes/Casa3.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 300px;
+        }
+        .card-4{
+            background-image: url(../multimedia/imagenes/Casa4.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 300px;
+        }
+        .card-5{
+            background-image: url(../multimedia/imagenes/Casa5.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 300px;
+        }
+        .card-6{
+            background-image: url(../multimedia/imagenes/Casa6.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 300px;
+        }
+        .card-7{
+            background-image: url(../multimedia/imagenes/Casa7.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 300px;
+        }
+        .card-8{
+            background-image: url(../multimedia/imagenes/Casa8.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 300px;
+        }
+        .card-9{
+            background-image: url(../multimedia/imagenes/Casa9.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 300px;
+        }
     }
+
     .card:hover{
         transform: scale(1.05);
     }
-    .card-body{
-        background-color:$fondo4;
-        .card-title{
-            font-size: $fontsize3;
-        }
-        .card-subtitle{
-            font-size: $fontsize4;
-        }
-        .card-text{
-            font-size: $fontsize4;
-        }
-        .btn{
-            background-color:$fondo2;
-            color: $color1;
-        }
+
+/*Swipers*/
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: $color1;
+        
+        .card-body{
+            background-color:$fondo4;
+                .card-title{
+                    font-size: $fontsize3;
+                    
+                }
+                .card-text{
+                    font-size: $fontsize4;
+                }
+                .btn{
+                    background-color:$fondo2;
+                    color: $color1;
+                }
+            }
+    }
+    .swiper-button-next{
+        color: $color2;
+    }
+    .swiper-button-prev{
+        color: $color2;
     }
 }
 
+.article{
+    background-image: linear-gradient( to bottom , $fondo5 , $fondo2);   
+
+    video{
+        padding: 20px;
+        background-color:$fondo2
+    }
+}
 
 //Footer//
 
@@ -256,17 +350,18 @@ footer{
         height: $height1;
     }
     span{
-        font-size: $fontsize4;
+        font-size: $fontsize3;
         font-weight: bold;
     }
     p{
-        font-size: $fontsize5;
+        font-size: $fontsize4;
     }
     ul{
         li{
             list-style: none;
-            font-size: $fontsize5;
+            font-size: $fontsize4;
             list-style: none;
+            
             a{
                 color: $color1;
             }
@@ -278,10 +373,10 @@ footer{
 
 }
 
-.footer1{
+.icons{
     a{
         letter-spacing: 7px;
-        font-size: $fontsize5;
+        font-size: $fontsize3;
         text-decoration: none;
         color: $color1;
     }
@@ -293,7 +388,7 @@ footer{
 
 //Call//
 .jumbotron2{
-    background-image: url(../multimedia/imagenes/Profesionales.png);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.19), rgba(255, 255, 255, 0.598)), url(../multimedia/imagenes/Profesionales.png);
 }
 
 //Main//
@@ -318,15 +413,38 @@ footer{
         .nright{
             text-align: justify;
             padding-top: 20px;
+            font-size: $fontsize4;
             } 
 }
 
+.prof{
+    transition: all 0.7s;
+    color: $color2;
+    height: auto;
+    padding: 20px;
+    .card-body{
+        background-color:$fondo4;
+            .card-title{
+                font-size: $fontsize3;
+            }
+            .card-text{
+                font-size: $fontsize4;
+            }
+            .btn{
+                background-color:$fondo2;
+                color: $color1;
+            }
+        }
+}
+.prof:hover{
+    transform: scale(1.05);
+}
 
 //PAGE OBRAS//
 //Call//
 
 .jumbotron3{
-    background-image: url(../multimedia/imagenes/Obras.png);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.19), rgba(255, 255, 255, 0.598)), url(../multimedia/imagenes/Obras.png);
 }
 
 //Main//
@@ -336,9 +454,46 @@ footer{
     @extend .nleft;
 }
 
-//Acordeon/
+//Accordion/
 
-/////////////////////////
+.accordion{
+    background-color: $color2;
+    .accordion-item{
+        border: none;
+        .accordion-header{
+            background-color:$color2;
+            height: 80px;
+            .accordion-button{
+                font-size: $fontsize3;
+                color: $color2;
+                background-color: $color1;
+            }
+        }
+        .accordion-collapse{
+            background-image: linear-gradient( to bottom , $fondo2 , $fondo5 );
+            transition: all 1.5s;
+            .accordion-body{
+                ul{
+                    li{
+                        padding: 5px;
+                        color: $color1;
+                        a{
+                        text-decoration: none;
+                        color: $color1;
+                        font-size: $fontsize3;  
+                        
+                        }
+                        a:hover{
+                            color: $color2;
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+}
+
 
 
 //Galeria//
@@ -347,8 +502,8 @@ footer{
 .tipologias{
     background-image: linear-gradient( to top , $fondo2 , $fondo5 );  
     color: $color1;
-    font-family: $font2;
     padding: 10px;
+    overflow: hidden; 
 
     .tipo-img{
         border: 4px solid $color2;
@@ -387,7 +542,7 @@ footer{
 //Main//
 
 .nleft3{
-    background-image: url(../multimedia/imagenes/Oficina2.jpg);
+    background-image: url(../multimedia/imagenes/Oficina.jpg);
     @extend .nleft;
     }
 
@@ -397,16 +552,24 @@ footer{
         padding: 20px;
         color: $color1;
 
-        h3{
-            font-size: $fontsize3;
-            i{
-                font-size: $fontsize4;
+        .servicio{
+            transition: all 0.7s;
+            color: white;
+
+            h3{
+                font-size: $fontsize3;
+                i{
+                    font-size: $fontsize4;
+                }
             }
+            p{
+                font-size: $fontsize5;
+                text-align: justify;
+            } 
         }
-        p{
-            font-size: $fontsize5;
-            text-align: justify;
-        } 
+        .servicio:hover {
+            transform: scale(1.05);
+          }
     }
 
 
@@ -415,7 +578,7 @@ footer{
 //Call//
 
 .jumbotron5{
-    background-image: url(../multimedia/imagenes/Contaacto\ 2.png);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.19), rgba(255, 255, 255, 0.598)), url(../multimedia/imagenes/Contacto.png);
 }
 
 //Main//

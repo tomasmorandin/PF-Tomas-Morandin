@@ -7,13 +7,14 @@
 }
 
 .navbar {
-  background-color: rgba(165, 145, 145, 0.424);
+  background-color: rgba(242, 235, 235, 0.7);
   width: 100%;
   position: fixed;
   animation-name: aparecer1;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 0.5s;
+  z-index: 99999;
 }
 @keyframes aparecer1 {
   from {
@@ -41,11 +42,12 @@
 .navbar img {
   height: 90px;
 }
-.navbar .nav-link {
+.navbar .collapse ul li {
+  padding: 15px;
+}
+.navbar .collapse ul li .nav-link {
   color: black !important;
-  font-size: 27px !important;
-  text-shadow: 0 0 5px #fff;
-  font-family: "Ubuntu", sans-serif;
+  font-size: 22px !important;
   transition: all 0.3s;
   animation-name: movimiento;
   animation-iteration-count: 1;
@@ -77,10 +79,9 @@
 .jumbotron {
   background-color: rgb(121, 7, 7);
   font-size: 40px;
-  height: 750px;
+  height: 900px;
   color: black;
-  font-family: "Ubuntu", sans-serif;
-  padding-top: 450px;
+  padding-top: 590px;
   padding-left: 20px;
   background-position: center;
   background-size: cover;
@@ -88,6 +89,7 @@
 }
 .jumbotron h1 {
   font-size: 40px;
+  font-weight: bold;
 }
 .jumbotron p {
   font-size: 27px;
@@ -98,14 +100,16 @@
 .jumbotron .btn {
   background-color: rgb(121, 7, 7);
   border-radius: 15px;
+  border: 2px solid black;
   transition: all 0.7s;
 }
 .jumbotron .btn:hover {
-  transform: scale(1.08);
+  transform: scale(1.1);
+  background-color: black;
 }
 
 .jumbotron1 {
-  background-image: url(../multimedia/imagenes/Arquitectos\ en\ obra\ 3.jpg);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.598)), url(../multimedia/imagenes/Arquitectos\ en\ obra\ 3.jpg);
 }
 
 h2 {
@@ -117,55 +121,131 @@ h2 {
   text-align: center;
   line-height: unset;
   padding: 10px;
-  text-shadow: 0 0 5px #fff;
+  text-shadow: 0 0 5px white;
   margin-bottom: 0;
 }
 
-aside {
-  background-color: rgb(121, 7, 7);
-  background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(121, 7, 7));
-}
-aside p {
+.main p {
   color: white;
-  font-family: "Ubuntu", sans-serif;
   font-size: 18px;
   text-align: justify;
   padding-top: 20px;
 }
-
-.carousel-indicators button[type=button] {
+.main .carousel-indicators button[type=button] {
   height: 15px;
   width: 15px;
   border-radius: 50%;
 }
 
-.cards {
-  background-color: rgb(121, 7, 7);
-  background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(121, 7, 7));
+.swiper-container {
+  position: relative;
+  height: 100%;
   padding: 10px;
+  overflow: hidden;
+  /*Swipers*/
 }
-.cards .card {
+.swiper-container .card {
   transition: all 0.7s;
   color: black;
+  padding: 15px;
 }
-.cards .card:hover {
+.swiper-container .card .card-1 {
+  background-image: url(../multimedia/imagenes/Casa1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+.swiper-container .card .card-2 {
+  background-image: url(../multimedia/imagenes/Casa2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+.swiper-container .card .card-3 {
+  background-image: url(../multimedia/imagenes/Casa3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+.swiper-container .card .card-4 {
+  background-image: url(../multimedia/imagenes/Casa4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+.swiper-container .card .card-5 {
+  background-image: url(../multimedia/imagenes/Casa5.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+.swiper-container .card .card-6 {
+  background-image: url(../multimedia/imagenes/Casa6.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+.swiper-container .card .card-7 {
+  background-image: url(../multimedia/imagenes/Casa7.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+.swiper-container .card .card-8 {
+  background-image: url(../multimedia/imagenes/Casa8.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+.swiper-container .card .card-9 {
+  background-image: url(../multimedia/imagenes/Casa9.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+.swiper-container .card:hover {
   transform: scale(1.05);
 }
-.cards .card-body {
+.swiper-container .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: white;
+}
+.swiper-container .swiper-slide .card-body {
   background-color: white;
 }
-.cards .card-body .card-title {
+.swiper-container .swiper-slide .card-body .card-title {
   font-size: 22px;
 }
-.cards .card-body .card-subtitle {
+.swiper-container .swiper-slide .card-body .card-text {
   font-size: 18px;
 }
-.cards .card-body .card-text {
-  font-size: 18px;
-}
-.cards .card-body .btn {
+.swiper-container .swiper-slide .card-body .btn {
   background-color: rgb(121, 7, 7);
   color: white;
+}
+.swiper-container .swiper-button-next {
+  color: black;
+}
+.swiper-container .swiper-button-prev {
+  color: black;
+}
+
+.article {
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(121, 7, 7));
+}
+.article video {
+  padding: 20px;
+  background-color: rgb(121, 7, 7);
 }
 
 footer {
@@ -178,15 +258,15 @@ footer img {
   height: 90px;
 }
 footer span {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
 }
 footer p {
-  font-size: 15px;
+  font-size: 18px;
 }
 footer ul li {
   list-style: none;
-  font-size: 15px;
+  font-size: 18px;
   list-style: none;
 }
 footer ul li a {
@@ -196,15 +276,15 @@ footer ul li a:hover {
   color: black;
 }
 
-.footer1 a {
+.icons a {
   letter-spacing: 7px;
-  font-size: 15px;
+  font-size: 22px;
   text-decoration: none;
   color: white;
 }
 
 .jumbotron2 {
-  background-image: url(../multimedia/imagenes/Profesionales.png);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.19), rgba(255, 255, 255, 0.598)), url(../multimedia/imagenes/Profesionales.png);
 }
 
 .main {
@@ -225,21 +305,78 @@ footer ul li a:hover {
 .main .nright {
   text-align: justify;
   padding-top: 20px;
+  font-size: 18px;
+}
+
+.prof {
+  transition: all 0.7s;
+  color: black;
+  height: auto;
+  padding: 20px;
+}
+.prof .card-body {
+  background-color: white;
+}
+.prof .card-body .card-title {
+  font-size: 22px;
+}
+.prof .card-body .card-text {
+  font-size: 18px;
+}
+.prof .card-body .btn {
+  background-color: rgb(121, 7, 7);
+  color: white;
+}
+
+.prof:hover {
+  transform: scale(1.05);
 }
 
 .jumbotron3 {
-  background-image: url(../multimedia/imagenes/Obras.png);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.19), rgba(255, 255, 255, 0.598)), url(../multimedia/imagenes/Obras.png);
 }
 
 .nleft2 {
   background-image: url(../multimedia/imagenes/Servicios\ 2.webp);
 }
 
+.accordion {
+  background-color: black;
+}
+.accordion .accordion-item {
+  border: none;
+}
+.accordion .accordion-item .accordion-header {
+  background-color: black;
+  height: 80px;
+}
+.accordion .accordion-item .accordion-header .accordion-button {
+  font-size: 22px;
+  color: black;
+  background-color: white;
+}
+.accordion .accordion-item .accordion-collapse {
+  background-image: linear-gradient(to bottom, rgb(121, 7, 7), rgb(0, 0, 0));
+  transition: all 1.5s;
+}
+.accordion .accordion-item .accordion-collapse .accordion-body ul li {
+  padding: 5px;
+  color: white;
+}
+.accordion .accordion-item .accordion-collapse .accordion-body ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+}
+.accordion .accordion-item .accordion-collapse .accordion-body ul li a:hover {
+  color: black;
+}
+
 .tipologias {
   background-image: linear-gradient(to top, rgb(121, 7, 7), rgb(0, 0, 0));
   color: white;
-  font-family: "Ubuntu", sans-serif;
   padding: 10px;
+  overflow: hidden;
 }
 .tipologias .tipo-img {
   border: 4px solid black;
@@ -396,7 +533,7 @@ footer ul li a:hover {
 }
 
 .nleft3 {
-  background-image: url(../multimedia/imagenes/Oficina2.jpg);
+  background-image: url(../multimedia/imagenes/Oficina.jpg);
 }
 
 .articulo {
@@ -405,19 +542,26 @@ footer ul li a:hover {
   padding: 20px;
   color: white;
 }
-.articulo h3 {
+.articulo .servicio {
+  transition: all 0.7s;
+  color: white;
+}
+.articulo .servicio h3 {
   font-size: 22px;
 }
-.articulo h3 i {
+.articulo .servicio h3 i {
   font-size: 18px;
 }
-.articulo p {
+.articulo .servicio p {
   font-size: 15px;
   text-align: justify;
 }
+.articulo .servicio:hover {
+  transform: scale(1.05);
+}
 
 .jumbotron5 {
-  background-image: url(../multimedia/imagenes/Contaacto\ 2.png);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.19), rgba(255, 255, 255, 0.598)), url(../multimedia/imagenes/Contacto.png);
 }
 
 .loc {
